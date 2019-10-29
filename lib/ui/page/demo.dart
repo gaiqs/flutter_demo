@@ -12,10 +12,13 @@ class _DemoState extends State<Demo> {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        Container(
-          height: 50,
-          color: Colors.amber[900],
-          child: Center(child: Text("原生交互")),
+        GestureDetector(
+          onTap: _open,
+          child: Container(
+            height: 50,
+            color: Colors.amber[900],
+            child: Center(child: Text("原生交互")),
+          ),
         ),
         Container(
           height: 50,
@@ -39,5 +42,9 @@ class _DemoState extends State<Demo> {
         )
       ],
     );
+  }
+
+  void _open() {
+    Navigator.of(context).pushNamed('channel');
   }
 }

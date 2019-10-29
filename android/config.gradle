@@ -1,0 +1,133 @@
+ext {
+
+    plugins = [
+            library    : 'com.android.library',
+            application: 'com.android.application'
+    ]
+
+    android = [
+            applicationId        : "com.cqzs.flutter.flutter_demo",
+            versionCode          : 0,
+            versionName          : "1.0.0",
+
+            compileSdkVersion    : 28,
+            buildToolsVersion    : "28.0.0",
+            minSdkVersion        : 16,
+            targetSdkVersion     : 28,
+            supportLibraryVersion: "1.0.0"
+    ]
+
+    dependencies = [
+            // support.
+            appCompat       : "androidx.appcompat:appcompat:1.0.0",
+            recyclerView    : "androidx.recyclerview:recyclerview:1.0.0",
+            cardView        : "androidx.cardview:cardview:1.0.0",
+            design          : "com.google.android.material:material:1.0.0",
+
+            //gson
+            gson            : 'com.google.code.gson:gson:2.8.5',
+            // json parser.
+            fastJson        : 'com.alibaba:fastjson:1.1.68.android',
+
+            // okhttp.
+            OkHttpVersion   : 'com.squareup.okhttp3:okhttp:3.6.0',
+            okhttpUrl       : 'com.squareup.okhttp3:okhttp-urlconnection:3.10.0',
+            retrofit2       : 'com.squareup.retrofit2:retrofit:2.6.2',
+            retrofit2GSON   : 'com.squareup.retrofit2:converter-gson',
+            
+            //For developers using AndroidX in their applications
+            easypermissions : 'pub.devrel:easypermissions:3.0.0',
+            rxpermissions   : 'com.github.tbruyelle:rxpermissions:0.10.2',
+
+            okalle          : 'com.yanzhenjie:okalle:0.1.7',
+            
+            //okgo
+            okgo            : 'com.lzy.net:okgo:3.0.4',
+            okrx            : 'com.lzy.net:okrx2:2.0.2',
+            okserver        : 'com.lzy.net:okserver:2.0.5',
+            //umeng
+            umeng_analytics : 'com.umeng.umsdk:analytics:8.0.0',
+            umeng_common    : 'com.umeng.umsdk:common:2.0.0',
+            //glide https://github.com/bumptech/glide
+            glide           : 'com.github.bumptech.glide:glide:4.6.1',
+            glideCompiler   : 'com.github.bumptech.glide:compiler:4.6.1',
+
+            logger          : 'com.orhanobut:logger:2.2.0',
+
+            baseRecyclerView: 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45',
+            
+
+            eventbus        : 'org.greenrobot:eventbus:3.1.1'
+    ]
+
+    mqtt = [
+            group                  : 'org.eclipse.paho',
+            clientVersion          : 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0',
+            mavenUrl               : 'https://repo.eclipse.org/content/repositories/paho-releases/',
+
+            sampleArchivesBaseName : 'org.eclipse.paho.android.sample',
+            sampleVersion          : '1.1.0',
+
+            serviceArchivesBaseName: 'org.eclipse.paho.android.service',
+            serviceVersion         : '1.1.0'
+    ]
+
+    // RX Java  and Reactive Extensions for Android
+    // https://github.com/ReactiveX/RxAndroid
+    rxjava2 = [
+            rxandroid: 'io.reactivex.rxjava2:rxandroid:2.0.1',
+            rxjava   : 'io.reactivex.rxjava2:rxjava:2.1.2'
+    ]
+    amap = [
+            //高德搜索
+            search    : 'com.amap.api:search:latest.integration',
+            //高德定位
+            location  : 'com.amap.api:location:latest.integration',
+            //地图
+            amap3d    : 'com.amap.api:3dmap:latest.integration',
+            amap2d    : 'com.amap.api:map2d:latest.integration',
+            //导航
+            navi_3dmap: 'com.amap.api:navi-3dmap:latest.integration'
+    ]
+
+    ams = [
+            amsPush      : 'com.aliyun.ams:alicloud-android-push:3.1.3@aar',
+            amsUtils     : 'com.aliyun.ams:alicloud-android-utils:1.1.3',
+            amsBeacon    : 'com.aliyun.ams:alicloud-android-beacon:1.0.1',
+            amsUt        : 'com.aliyun.ams:alicloud-android-ut:5.4.0',
+            amsThirdPush : 'com.aliyun.ams:alicloud-android-third-push:3.0.8@aar',
+            amsMeizu     : 'com.aliyun.ams:meizu-push:3.8.3-fix',
+            amsHuawei    : 'com.aliyun.ams:huawei-push:2.6.3.305',
+            amsHuaweiBase: 'com.aliyun.ams:huawei-push-base:2.6.3.305'
+    ]
+
+    share = [
+            //微信
+            wechat: 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    ]
+
+    image = [
+            //luban https://github.com/Curzibn/Luban
+            luban: 'top.zibin:Luban:1.1.8',
+            //https://gitee.com/jiangsheng1987/Androids
+            view : 'com.forward.androids:androids:1.2.1'
+    ]
+
+    release = [
+            keyAlias     : 'dongfeng',
+            keyPassword  : '123456',
+            storeFile    : '../release.keystore',
+            storePassword: '123456'
+    ]
+    debug = [
+            keyAlias     : 'androiddebugkey',
+            keyPassword  : 'android',
+            storeFile    : '../debug.keystore',
+            storePassword: 'android'
+    ]
+
+    ext.channel = [
+            AND001: "AND001",
+            AND002: "AND002"
+    ]
+}

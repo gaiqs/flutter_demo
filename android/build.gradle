@@ -1,3 +1,5 @@
+apply from: "$rootDir/config.gradle"
+
 buildscript {
     ext.kotlin_version = '1.2.71'
     repositories {
@@ -15,6 +17,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 
