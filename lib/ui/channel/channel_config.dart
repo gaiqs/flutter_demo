@@ -6,4 +6,8 @@ class ChannelConfig {
   static const OPEN_HTTPS_PARAMS = "https_params";
 
   static const CHANNEL_TIME = 'cqzs.timeunit/plugin';
+
+  static const CHANNEL_LOCATION = 'cqzs.location/plugin';
+
+  static const CHANNEL_PMSS = "cqzs.permisstions/plugin";
 }

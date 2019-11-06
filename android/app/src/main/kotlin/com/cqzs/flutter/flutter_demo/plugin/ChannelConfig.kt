@@ -16,5 +16,7 @@ object ChannelConfig {
     const val OPEN_HTTPS_PARAMS = "https_params"
 
     const val CHANNEL_TIME = "cqzs.timeunit/plugin"
+    const val CHANNEL_LOCATION = "cqzs.location/plugin"
+    const val CHANNEL_PMSS = "cqzs.permisstions/plugin"
 
 }

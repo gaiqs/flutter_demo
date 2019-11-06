@@ -23,6 +23,8 @@ if (flutterVersionName == null) {
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
@@ -69,7 +71,7 @@ dependencies {
 
     // support.
     implementation rootProject.ext.dependencies.appCompat
-//    implementation rootProject.ext.dependencies.design
+    implementation rootProject.ext.dependencies.design
     implementation rootProject.ext.dependencies.recyclerView
 //    implementation rootProject.ext.dependencies.cardView
     //library
@@ -78,4 +80,6 @@ dependencies {
     implementation rootProject.ext.dependencies.rxpermissions
     implementation rootProject.ext.rxjava2.rxandroid
     implementation rootProject.ext.rxjava2.rxjava
+
+    implementation rootProject.ext.amap.location
 }

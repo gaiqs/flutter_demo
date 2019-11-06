@@ -14,12 +14,12 @@ class ChannelPage extends StatefulWidget {
 class _ChannelPageState extends State<ChannelPage> {
   static const open = const MethodChannel(ChannelConfig.CHANNEL_OPEN);
 
-  static const time = const EventChannel('cqzs.timeunit/plugin');
+  static const time = const EventChannel(ChannelConfig.CHANNEL_TIME);
 
-  static const amapLocPlugin = const EventChannel('com.jzhu.amap.loc/plugin');
+  static const location = const EventChannel(ChannelConfig.CHANNEL_LOCATION);
 
   static const perimissionsPlugin =
-      const MethodChannel('com.jzhu.permisstions/plugin');
+      const MethodChannel(ChannelConfig.CHANNEL_PMSS);
 
   StreamSubscription _counterSub;
 
@@ -81,7 +81,7 @@ class _ChannelPageState extends State<ChannelPage> {
     _askPermission(perimissions).then((granted) {
       if (granted) {
         if (_amapSub == null) {
-          _amapSub = amapLocPlugin
+          _amapSub = location
               .receiveBroadcastStream()
               .listen(_onAMapEvent, onError: _onAMapError);
         }
