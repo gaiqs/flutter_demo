@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/ui/page/constants.dart';
+import 'package:flutter_demo/ui/page/full_width_button.dart';
 
 class Demo extends StatefulWidget {
   @override
@@ -10,6 +12,27 @@ class Demo extends StatefulWidget {
 class _DemoState extends State<Demo> {
   @override
   Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: Constants.Height),
+          FullWidthButton(
+            iconPath: "assets/images/ic_wallet.png",
+            title: "Flutter交互",
+            onPressed: () {
+              _open();
+            },
+            showDivider: true,
+          ),
+          FullWidthButton(
+            iconPath: "assets/images/ic_wallet.png",
+            onPressed: () {},
+            title: "UI控件测试",
+            showDivider: true,
+          ),
+        ],
+      ),
+    );
     return ListView(
       children: <Widget>[
         GestureDetector(
