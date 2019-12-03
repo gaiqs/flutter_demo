@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/ui/page/constants.dart';
-import 'package:flutter_demo/ui/page/full_width_button.dart';
+import 'package:flutter_demo/widget/full_width_button.dart';
 
 class Demo extends StatefulWidget {
   @override
