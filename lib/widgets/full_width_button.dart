@@ -6,9 +6,9 @@ class FullWidthButton extends StatelessWidget {
   static const VERTICAL_PADDING = 13.0;
 
   const FullWidthButton({
-    @required this.title,
-    @required this.iconPath,
-    @required this.onPressed,
+    this.title,
+    this.iconPath,
+    this.onPressed,
     this.showDivider: false,
   })  : assert(iconPath != null),
         assert(title != null),
@@ -26,12 +26,15 @@ class FullWidthButton extends StatelessWidget {
       children: <Widget>[
         Image.asset(
           iconPath,
-          width: Constants.FullWidthIconButtonIconSize,
-          height: Constants.FullWidthIconButtonIconSize,
+          width: 24,
+          height: 24,
         ),
         SizedBox(width: HORIZONTAL_PADDING),
         Expanded(
-          child: Text(title),
+          child: Text(
+            title,
+            style: TextStyle(fontSize: 16),
+          ),
         ),
         Icon(
           IconData(
